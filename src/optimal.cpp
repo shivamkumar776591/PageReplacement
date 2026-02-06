@@ -1,7 +1,9 @@
+#include "../include/optimal.h"
+
 #include<bits/stdc++.h>
 using namespace std;
 
-int Optimal(vector<int>& pages, int frames) {
+int optimalPageFaults(vector<int>& pages, int frames) {
     unordered_set<int> mp;
     int pageFaults = 0;
     int n = pages.size();
@@ -52,21 +54,4 @@ int Optimal(vector<int>& pages, int frames) {
 
     return pageFaults;
 }
-int main(){
-    int n;
-    int frame;
-    cout<<"Enter number of pages";
-    cin>>n;
-    vector<int>pages(n);
-    cout<<"Enter pages"<<endl;
-    for (int i = 0; i <n; i++)
-    {
-        cin>>pages[i];
-    }
-     
-    cout<<"Enter Frame size "<<endl;
-    cin>>frame;
 
-    cout<<"No. of Page faults due to Optimal: "<<Optimal(pages,frame);
-  
-}
