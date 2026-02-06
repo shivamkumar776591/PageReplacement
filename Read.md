@@ -14,5 +14,5 @@ C++ implementation of **FIFO**, **LRU**, and **Optimal** page replacement algori
 
 ## How to Run
 ```bash
-g++ main.cpp
-./a.out
+g++ main.cpp src/fifo.cpp src/lru.cpp src/optimal.cpp -o pager
+./pager
